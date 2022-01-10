@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudiesOnDesignPatterns.Patterns.Strategy_Pattern
 {
-    public abstract class Duck// : IFlyBehavior, IQuackBehavior
+    public abstract class Duck
     {
         internal IFlyBehavior _flyBehavior;
         internal IQuackBehavior _quackBehavior;
