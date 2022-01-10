@@ -9,7 +9,14 @@ namespace StudiesOnDesignPatterns
     {
         static void Main(string[] args)
         {
+            StrategyPattern();
 
+            Console.ReadKey();
+            //The different patterns are stored in the 'Patterns' folder
+        }
+
+        private static void StrategyPattern()
+        {
             Console.WriteLine("Mallard Duck test");
 
             Duck mallard = new MallardDuck();
@@ -39,10 +46,6 @@ namespace StudiesOnDesignPatterns
             rocketDuck.PerformFly();
             rocketDuck.Swim();
             rocketDuck.Display();
-
-
-            Console.ReadKey();
-            //The different patterns are stored in the 'Patterns' folder
         }
     }
 }
