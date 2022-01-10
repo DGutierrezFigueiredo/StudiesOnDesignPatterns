@@ -23,6 +23,16 @@ namespace StudiesOnDesignPatterns.Patterns.Strategy_Pattern
             _quackBehavior.Quack();
         }
 
+        public void SetFlyBehavior(IFlyBehavior flyBehavior)
+        {
+            _flyBehavior = flyBehavior;
+        }
+
+        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        {
+            _quackBehavior = quackBehavior;
+        }
+
         public void Swim()
         {
             Console.WriteLine("We all float in here, Georgie");
