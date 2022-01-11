@@ -3,5 +3,7 @@
 
 <b>Table:</b>
 
--Strategy Pattern 
+-Strategy Pattern
+
+ 
 -Observer Pattern
