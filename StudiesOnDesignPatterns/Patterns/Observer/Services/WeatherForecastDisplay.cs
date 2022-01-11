@@ -10,12 +10,12 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Services
 {
     public class WeatherForecastDisplay : IObserver
     {
-        private WeatherData _weatherData;
+        private WeatherData _weatherData = new WeatherData();
         private string _weatherForecast { get; set; }
 
-        public string GetWeatherForecast()
+        public void GetWeatherForecast()
         {
-            return _weatherForecast;
+            Console.WriteLine($"Temperature for today is {_weatherData.Temperature}°. {_weatherForecast}"); 
         }
 
         public void SetWeatherForecast()

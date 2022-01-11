@@ -25,12 +25,12 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
 
         public void SetWeatherConditions()
         {
-            Random rng = new Random(50);
-            Random rng2 = new Random(100);
+            Random rng = new Random();
+            Random rng2 = new Random();
 
-            Temperature = rng.Next();
-            Humidity = rng2.Next();
-            Pressure = rng2.Next();
+            Temperature = rng.Next(50);
+            Humidity = rng2.Next(100);
+            Pressure = rng2.Next(100);
             NotifyObservers();
         }
 

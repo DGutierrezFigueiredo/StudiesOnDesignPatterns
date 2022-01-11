@@ -1,4 +1,6 @@
-﻿using StudiesOnDesignPatterns.Patterns.Strategy_Pattern;
+﻿using StudiesOnDesignPatterns.Patterns.Observer.Entities;
+using StudiesOnDesignPatterns.Patterns.Observer.Services;
+using StudiesOnDesignPatterns.Patterns.Strategy_Pattern;
 using StudiesOnDesignPatterns.Patterns.Strategy_Pattern.Entities;
 using StudiesOnDesignPatterns.Patterns.Strategy_Pattern.Strategies;
 using System;
@@ -9,7 +11,20 @@ namespace StudiesOnDesignPatterns
     {
         static void Main(string[] args)
         {
-            StrategyPattern();
+            WeatherMonitoringStation weatherStation = new WeatherMonitoringStation();
+            WeatherData weatherData = new WeatherData();
+            WeatherForecastDisplay forecastDisplay = new WeatherForecastDisplay();
+
+            weatherStation.SubscribeObserver(weatherData);
+            weatherData.SubscribeObserver(forecastDisplay);
+
+            weatherStation.SetWeatherConditions();
+
+            forecastDisplay.GetWeatherForecast();
+
+            weatherStation.SetWeatherConditions();
+
+            forecastDisplay.GetWeatherForecast();
 
             Console.ReadKey();
             //The different patterns are stored in the 'Patterns' folder

@@ -9,7 +9,7 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
 {
     public class WeatherData : IObservable, IObserver
     {
-        WeatherMonitoringStation _weatherMonitoringStation;
+        WeatherMonitoringStation _weatherMonitoringStation = new WeatherMonitoringStation();
         public float Temperature { get; set; }
         public float Humidity { get; set; }
         public float Pressure { get; set; }
@@ -39,6 +39,7 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
             Temperature = _weatherMonitoringStation.Temperature;
             Humidity = _weatherMonitoringStation.Humidity;
             Pressure = _weatherMonitoringStation.Pressure;
+            NotifyObservers();
         }
     }
 }
