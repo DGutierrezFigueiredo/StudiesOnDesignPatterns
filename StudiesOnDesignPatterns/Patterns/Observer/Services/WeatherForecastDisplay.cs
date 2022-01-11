@@ -10,18 +10,29 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Services
 {
     public class WeatherForecastDisplay : IObserver
     {
-        private WeatherData _weatherData = new WeatherData();
+        private WeatherData _weatherData;// = new WeatherData();
+        public WeatherForecastDisplay(WeatherData weatherData)
+        {
+            _weatherData = weatherData;
+        }
         private string _weatherForecast { get; set; }
 
         public void GetWeatherForecast()
         {
-            Console.WriteLine($"Temperature for today is {_weatherData.Temperature}°. {_weatherForecast}"); 
+            Console.WriteLine($"Temperature for today is {_weatherData.Temperature}°. {_weatherForecast}");
         }
 
         public void SetWeatherForecast()
         {
-            if(_weatherData.Temperature > 30) _weatherForecast = "Good day to go to the beach";
-            _weatherForecast = "You might consider taking a coat with you";
+            if (_weatherData.Temperature > 30)
+            {
+                _weatherForecast = "Good day to go to the beach";
+            }
+            else
+            {
+                _weatherForecast = "You might consider taking a coat with you";
+            }
+
         }
 
         public void Update()

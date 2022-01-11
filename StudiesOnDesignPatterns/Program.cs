@@ -12,8 +12,8 @@ namespace StudiesOnDesignPatterns
         static void Main(string[] args)
         {
             WeatherMonitoringStation weatherStation = new WeatherMonitoringStation();
-            WeatherData weatherData = new WeatherData();
-            WeatherForecastDisplay forecastDisplay = new WeatherForecastDisplay();
+            WeatherData weatherData = new WeatherData(weatherStation);
+            WeatherForecastDisplay forecastDisplay = new WeatherForecastDisplay(weatherData);
 
             weatherStation.SubscribeObserver(weatherData);
             weatherData.SubscribeObserver(forecastDisplay);

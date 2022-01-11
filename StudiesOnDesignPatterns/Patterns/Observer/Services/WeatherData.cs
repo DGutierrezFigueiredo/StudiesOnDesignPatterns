@@ -9,7 +9,12 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
 {
     public class WeatherData : IObservable, IObserver
     {
-        WeatherMonitoringStation _weatherMonitoringStation = new WeatherMonitoringStation();
+        WeatherMonitoringStation _weatherMonitoringStation;// = new WeatherMonitoringStation();
+
+        public WeatherData(WeatherMonitoringStation weatherMonitoringStation)
+        {
+            _weatherMonitoringStation = weatherMonitoringStation;
+        }
         public float Temperature { get; set; }
         public float Humidity { get; set; }
         public float Pressure { get; set; }
