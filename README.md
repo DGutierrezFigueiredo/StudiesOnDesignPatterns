@@ -4,6 +4,4 @@
 <b>Table:</b>
 
 -Strategy Pattern
-
- 
 -Observer Pattern
