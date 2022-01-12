@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace StudiesOnDesignPatterns.Patterns.Observer.Services
 {
-    public class WeatherForecastDisplay : IObserver
+    public class WeatherForecastDisplay : IObserver , IDisplayElement
     {
         private IWeatherData _weatherData;
         public WeatherForecastDisplay(IWeatherData weatherData)
@@ -18,9 +18,9 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Services
         }
         private string _weatherForecast { get; set; }
 
-        public void GetWeatherForecast()
+        public void Display()
         {
-            Console.WriteLine($"Temperature for today is {_weatherData.Temperature}°. {_weatherForecast}");
+            Console.WriteLine($"Temperature today is {_weatherData.Temperature}°. {_weatherForecast}");
         }
 
         public void SetWeatherForecast()

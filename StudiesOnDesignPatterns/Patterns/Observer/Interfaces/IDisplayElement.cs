@@ -8,6 +8,6 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Interfaces
 {
     public interface IDisplayElement
     {
-        //Display()
+        public void Display();
     }
 }

@@ -9,7 +9,7 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
 {
     public class WeatherData : IObservable, IObserver , IWeatherData
     {
-        IWeatherMonitoringStation _weatherMonitoringStation;
+        private IWeatherMonitoringStation _weatherMonitoringStation;
 
         public WeatherData(IWeatherMonitoringStation weatherMonitoringStation)
         {

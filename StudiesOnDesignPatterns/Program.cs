@@ -11,22 +11,33 @@ namespace StudiesOnDesignPatterns
     {
         static void Main(string[] args)
         {
+            //The different patterns are stored in the 'Patterns' folder
+
+            ObserverPattern();
+
+            Console.ReadKey();
+
+        }
+
+        private static void ObserverPattern()
+        {
             WeatherMonitoringStation weatherStation = new WeatherMonitoringStation();
             WeatherData weatherData = new WeatherData(weatherStation);
             WeatherForecastDisplay forecastDisplay = new WeatherForecastDisplay(weatherData);
+            WeatherCurrentConditions weatherCurrentConditions = new WeatherCurrentConditions(weatherData);
 
             weatherStation.SetWeatherConditions();
 
-            forecastDisplay.GetWeatherForecast();
+            forecastDisplay.Display();
 
             weatherStation.SetWeatherConditions();
 
-            forecastDisplay.GetWeatherForecast();
+            ThirdPartyDevice unknownDevice = new ThirdPartyDevice(weatherCurrentConditions);
 
-            Console.ReadKey();
-            //The different patterns are stored in the 'Patterns' folder
+            unknownDevice.Display();
         }
 
+        
         private static void StrategyPattern()
         {
             Console.WriteLine("Mallard Duck test");
