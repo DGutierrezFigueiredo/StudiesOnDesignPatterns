@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
 {
-    public class WeatherData : IObservable, IObserver
+    public class WeatherData : IObservable, IObserver , IWeatherData
     {
-        WeatherMonitoringStation _weatherMonitoringStation;// = new WeatherMonitoringStation();
+        IWeatherMonitoringStation _weatherMonitoringStation;
 
-        public WeatherData(WeatherMonitoringStation weatherMonitoringStation)
+        public WeatherData(IWeatherMonitoringStation weatherMonitoringStation)
         {
             _weatherMonitoringStation = weatherMonitoringStation;
         }

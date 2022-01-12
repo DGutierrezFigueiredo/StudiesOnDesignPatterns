@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
 {
-    public class WeatherMonitoringStation : IObservable
+    public class WeatherMonitoringStation : IObservable , IWeatherMonitoringStation
     {
         public float Temperature { get; set; }
         public float Humidity { get; set; }

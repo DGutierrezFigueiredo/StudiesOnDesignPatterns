@@ -10,8 +10,8 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Services
 {
     public class WeatherForecastDisplay : IObserver
     {
-        private WeatherData _weatherData;// = new WeatherData();
-        public WeatherForecastDisplay(WeatherData weatherData)
+        private IWeatherData _weatherData;// = new WeatherData();
+        public WeatherForecastDisplay(IWeatherData weatherData)
         {
             _weatherData = weatherData;
         }
@@ -24,7 +24,7 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Services
 
         public void SetWeatherForecast()
         {
-            if (_weatherData.Temperature > 30)
+            if (_weatherData.Temperature >= 30)
             {
                 _weatherForecast = "Good day to go to the beach";
             }
