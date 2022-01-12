@@ -14,6 +14,7 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Services
         public WeatherForecastDisplay(IWeatherData weatherData)
         {
             _weatherData = weatherData;
+            _weatherData.SubscribeObserver(this);
         }
         private string _weatherForecast { get; set; }
 

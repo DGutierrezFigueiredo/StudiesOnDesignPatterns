@@ -16,7 +16,7 @@ namespace StudiesOnDesignPatterns
             WeatherForecastDisplay forecastDisplay = new WeatherForecastDisplay(weatherData);
 
             weatherStation.SubscribeObserver(weatherData);
-            weatherData.SubscribeObserver(forecastDisplay);
+            //weatherData.SubscribeObserver(forecastDisplay);
 
             weatherStation.SetWeatherConditions();
 
