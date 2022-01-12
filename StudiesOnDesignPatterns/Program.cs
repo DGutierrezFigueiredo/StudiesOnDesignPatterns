@@ -15,9 +15,6 @@ namespace StudiesOnDesignPatterns
             WeatherData weatherData = new WeatherData(weatherStation);
             WeatherForecastDisplay forecastDisplay = new WeatherForecastDisplay(weatherData);
 
-            weatherStation.SubscribeObserver(weatherData);
-            //weatherData.SubscribeObserver(forecastDisplay);
-
             weatherStation.SetWeatherConditions();
 
             forecastDisplay.GetWeatherForecast();

@@ -10,7 +10,7 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Services
 {
     public class WeatherForecastDisplay : IObserver
     {
-        private IWeatherData _weatherData;// = new WeatherData();
+        private IWeatherData _weatherData;
         public WeatherForecastDisplay(IWeatherData weatherData)
         {
             _weatherData = weatherData;

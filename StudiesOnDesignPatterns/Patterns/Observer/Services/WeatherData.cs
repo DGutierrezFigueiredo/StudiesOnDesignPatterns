@@ -14,6 +14,7 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
         public WeatherData(IWeatherMonitoringStation weatherMonitoringStation)
         {
             _weatherMonitoringStation = weatherMonitoringStation;
+            _weatherMonitoringStation.SubscribeObserver(this);
         }
         public float Temperature { get; set; }
         public float Humidity { get; set; }
