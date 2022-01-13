@@ -33,6 +33,7 @@ namespace StudiesOnDesignPatterns
             weatherStation.SetWeatherConditions();
 
             ThirdPartyDevice unknownDevice = new ThirdPartyDevice(weatherCurrentConditions);
+            unknownDevice.AddServiceToDeviceList(forecastDisplay);
 
             unknownDevice.Display();
         }

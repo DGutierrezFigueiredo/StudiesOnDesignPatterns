@@ -10,16 +10,27 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
 {
     public class ThirdPartyDevice : IDisplayElement
     {
-        private IDisplayElement _displayElement;
+        List<IDisplayElement> listOfServicesOnDevice = new List<IDisplayElement>();
 
         public ThirdPartyDevice(IDisplayElement displayElement)
         {
-            _displayElement = displayElement;
+            listOfServicesOnDevice.Add(displayElement);
         }
+
+        public void AddServiceToDeviceList(IDisplayElement displayElement)
+        {
+            listOfServicesOnDevice.Add(displayElement);
+        }
+
         public void Display()
         {
-            Console.Write($"Posted from My Unknown Device: ");
-            _displayElement.Display();
+            Console.Write("Posted from My Unknown Device: ");
+
+            foreach (IDisplayElement element in listOfServicesOnDevice)
+            {
+                element.Display();
+            }
+
         }
 
 
