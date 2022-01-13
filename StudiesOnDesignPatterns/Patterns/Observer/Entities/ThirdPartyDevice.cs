@@ -22,6 +22,11 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
             listOfServicesOnDevice.Add(displayElement);
         }
 
+        public void RemoveServiceFromDeviceList(IDisplayElement displayElement)
+        {
+            listOfServicesOnDevice.Remove(displayElement);
+        }
+
         public void Display()
         {
             Console.Write("Posted from My Unknown Device: ");
