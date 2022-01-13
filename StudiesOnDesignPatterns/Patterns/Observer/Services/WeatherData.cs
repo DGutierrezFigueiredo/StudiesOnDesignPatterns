@@ -11,14 +11,16 @@ namespace StudiesOnDesignPatterns.Patterns.Observer.Entities
     {
         private IWeatherMonitoringStation _weatherMonitoringStation;
 
+        public float Temperature { get; set; }
+        public float Humidity { get; set; }
+        public float Pressure { get; set; }
+
         public WeatherData(IWeatherMonitoringStation weatherMonitoringStation)
         {
             _weatherMonitoringStation = weatherMonitoringStation;
             _weatherMonitoringStation.SubscribeObserver(this);
         }
-        public float Temperature { get; set; }
-        public float Humidity { get; set; }
-        public float Pressure { get; set; }
+        
 
         List<IObserver> listOfObservers = new List<IObserver>();
         public void NotifyObservers()
