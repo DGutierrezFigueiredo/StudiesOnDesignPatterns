@@ -1,4 +1,6 @@
-﻿using StudiesOnDesignPatterns.Patterns.Observer.Entities;
+﻿using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Infrastructure;
+using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Interfaces;
+using StudiesOnDesignPatterns.Patterns.Observer.Entities;
 using StudiesOnDesignPatterns.Patterns.Observer.Services;
 using StudiesOnDesignPatterns.Patterns.Strategy_Pattern;
 using StudiesOnDesignPatterns.Patterns.Strategy_Pattern.Entities;
@@ -13,10 +15,21 @@ namespace StudiesOnDesignPatterns
         {
             //The different patterns are stored in the 'Patterns' folder
 
-            ObserverPattern();
+            NullObjectPattern();
 
             Console.ReadKey();
 
+        }
+
+        private static void NullObjectPattern()
+        {
+            MobileRepository mobileRepository = new MobileRepository();
+            IMobile mobile = mobileRepository.GetMobileByName("sony");
+            mobile.TurnDeviceOff();
+            mobile.TurnDeviceOn();
+
+            mobile = mobileRepository.GetMobileByName("Xiaomi");
+            mobile.TurnDeviceOn();
         }
 
         private static void ObserverPattern()
