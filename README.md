@@ -6,3 +6,5 @@
 -Strategy Pattern
 
 -Observer Pattern
+
+-NullObject Pattern
