@@ -17,17 +17,26 @@ namespace StudiesOnDesignPatterns
         {
             //The different patterns are stored in the 'Patterns' folder
 
+            DecoratorPattern();
+
+            Console.ReadKey();
+
+        }
+
+        private static void DecoratorPattern()
+        {
             Beverage beverage1 = new DarkRoast();
 
-            Console.WriteLine(beverage1.GetDescription() + " R$"+beverage1.Cost());
+            Console.WriteLine(beverage1.GetDescription() + " R$" + beverage1.Cost());
 
             beverage1 = new Moccha(beverage1);
             beverage1 = new Chocolate(beverage1);
 
             Console.WriteLine(beverage1.GetDescription() + " R$" + beverage1.Cost());
 
-            Console.ReadKey();
+            beverage1 = new Cinnamon(beverage1);
 
+            Console.WriteLine(beverage1.GetDescription() + " R$" + beverage1.Cost());
         }
 
         private static void NullObjectPattern()
