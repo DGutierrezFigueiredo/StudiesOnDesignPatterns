@@ -1,4 +1,6 @@
-﻿using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Infrastructure;
+﻿using StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Entities;
+using StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Interfaces;
+using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Infrastructure;
 using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Interfaces;
 using StudiesOnDesignPatterns.Patterns.Observer.Entities;
 using StudiesOnDesignPatterns.Patterns.Observer.Services;
@@ -15,7 +17,14 @@ namespace StudiesOnDesignPatterns
         {
             //The different patterns are stored in the 'Patterns' folder
 
-            NullObjectPattern();
+            Beverage beverage1 = new DarkRoast();
+
+            Console.WriteLine(beverage1.GetDescription() + " R$"+beverage1.Cost());
+
+            beverage1 = new Moccha(beverage1);
+            beverage1 = new Chocolate(beverage1);
+
+            Console.WriteLine(beverage1.GetDescription() + " R$" + beverage1.Cost());
 
             Console.ReadKey();
 
