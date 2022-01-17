@@ -3,8 +3,14 @@
 
 <b>Table:</b>
 
--Strategy Pattern
+-Decorator Pattern
+
+-NullObject Pattern
 
 -Observer Pattern
 
--NullObject Pattern
+-Strategy Pattern
+
+
+
+
