@@ -27,16 +27,16 @@ namespace StudiesOnDesignPatterns
         {
             Beverage beverage1 = new DarkRoast();
 
-            Console.WriteLine(beverage1.GetDescription() + " R$" + beverage1.Cost());
+            Console.WriteLine(beverage1.GetDescription() + " R$" + string.Format("{0:N}", beverage1.Cost()));
 
             beverage1 = new Moccha(beverage1);
             beverage1 = new Chocolate(beverage1);
 
-            Console.WriteLine(beverage1.GetDescription() + " R$" + beverage1.Cost());
+            Console.WriteLine(beverage1.GetDescription() + " R$" + string.Format("{0:N}", beverage1.Cost()));
 
             beverage1 = new Cinnamon(beverage1);
 
-            Console.WriteLine(beverage1.GetDescription() + " R$" + beverage1.Cost());
+            Console.WriteLine(beverage1.GetDescription() + " R$" + string.Format("{0:N}", beverage1.Cost()));
         }
 
         private static void NullObjectPattern()

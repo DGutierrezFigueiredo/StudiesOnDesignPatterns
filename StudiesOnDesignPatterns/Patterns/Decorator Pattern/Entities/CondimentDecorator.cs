@@ -8,7 +8,6 @@ namespace StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Interfaces
 {
     public abstract class CondimentDecorator : Beverage
     {
-        
         public abstract override string GetDescription();
     }
 }
