@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Entities
 {
-    public class Expresso : Beverage
+    public class Espresso : Beverage
     {
         public override decimal Cost()
         {
