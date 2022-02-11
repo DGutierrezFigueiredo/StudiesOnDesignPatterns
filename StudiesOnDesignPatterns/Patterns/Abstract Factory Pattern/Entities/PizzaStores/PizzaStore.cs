@@ -14,7 +14,7 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
         {
             CreatePizza(pizzaName);
         }
-        public abstract Pizza CreatePizza(PizzaFlavors pizzaName);
+        protected abstract Pizza CreatePizza(PizzaFlavors pizzaName);
 
     }
 }

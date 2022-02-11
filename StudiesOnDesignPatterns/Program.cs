@@ -1,4 +1,5 @@
-﻿using StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Entities;
+﻿using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.PizzaStores;
+using StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Entities;
 using StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Interfaces;
 using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Infrastructure;
 using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Interfaces;
@@ -17,8 +18,8 @@ namespace StudiesOnDesignPatterns
         {
             //The different patterns are stored in the 'Patterns' folder
 
-            
-
+            PizzaStore nycPizzaStore = new NYCPizzaStyleStore();
+            nycPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavors.Cheese);
             Console.ReadKey();
 
         }
