@@ -5,13 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Pizza
+namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Pizzas
 {
-    public class VegetarianPizza : Pizza
+    public class CheesePizza : Pizza
     {
         private IPizzaIngredientFactory _pizzaIngredientFactory;
 
-        public VegetarianPizza(IPizzaIngredientFactory pizzaIngredientFactory)
+        public CheesePizza(IPizzaIngredientFactory pizzaIngredientFactory)
         {
             _pizzaIngredientFactory = pizzaIngredientFactory;
         }
@@ -19,9 +19,9 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
         public override void PreparePizza()
         {
             Console.WriteLine("Preparing a " + GetPizzaName());
+            cheese = _pizzaIngredientFactory.CreateCheese();
             dough = _pizzaIngredientFactory.CreateDough();
             sauce = _pizzaIngredientFactory.CreateSauce();
-            veggies = _pizzaIngredientFactory.CreateVeggies();
 
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Pizzas;
+using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,9 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
 {
     public class ChicagoPizzaStyleStore : PizzaStore
     {
+        public override Pizza CreatePizza(PizzaFlavors pizzaName)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
