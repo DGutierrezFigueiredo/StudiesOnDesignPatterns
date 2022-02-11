@@ -24,6 +24,7 @@ namespace StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Infrastructure.Tes
 
             Assert.IsNotNull(mobile2);
             Assert.IsTrue(mobile != mobile2);
+            
         }
     }
 }

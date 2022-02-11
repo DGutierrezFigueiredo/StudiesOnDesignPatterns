@@ -17,7 +17,7 @@ namespace StudiesOnDesignPatterns
         {
             //The different patterns are stored in the 'Patterns' folder
 
-            DecoratorPattern();
+            
 
             Console.ReadKey();
 
