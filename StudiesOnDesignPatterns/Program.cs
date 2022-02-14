@@ -19,6 +19,14 @@ namespace StudiesOnDesignPatterns
         {
             //The different patterns are stored in the 'Patterns' folder
 
+            AbstractFactoryPattern();
+
+            Console.ReadKey();
+
+        }
+
+        private static void AbstractFactoryPattern()
+        {
             PizzaStore nycPizzaStore = new NYCPizzaStyleStore();
             Pizza clamPizza = nycPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavor.Clam);
             clamPizza.PreparePizza();
@@ -38,9 +46,6 @@ namespace StudiesOnDesignPatterns
             veggiePizza.BakePizza();
             veggiePizza.BoxPizza();
             veggiePizza.CutPizza();
-
-            Console.ReadKey();
-
         }
 
         private static void DecoratorPattern()
