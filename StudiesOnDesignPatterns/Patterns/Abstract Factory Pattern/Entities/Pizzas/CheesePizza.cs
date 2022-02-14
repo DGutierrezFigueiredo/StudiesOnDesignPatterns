@@ -16,6 +16,7 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
             _pizzaIngredientFactory = pizzaIngredientFactory;
         }
 
+
         public override void PreparePizza()
         {
             Console.WriteLine("Preparing a " + GetPizzaName());
@@ -24,5 +25,6 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
             sauce = _pizzaIngredientFactory.CreateSauce();
 
         }
+                
     }
 }

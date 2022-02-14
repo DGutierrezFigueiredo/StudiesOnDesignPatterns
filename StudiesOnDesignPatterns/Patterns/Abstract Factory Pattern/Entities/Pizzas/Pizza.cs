@@ -18,11 +18,11 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
         public IClam clam;
 
         public abstract void PreparePizza();
-        public void BakePizza()
+        public virtual void BakePizza()
         {
             Console.WriteLine("Bake pizza for 25 minutes at 350 degrees °C");
         }
-        public void CutPizza()
+        public virtual void CutPizza()
         {
             Console.WriteLine("Cut pizza in 8 diagonal slices");
         }
@@ -30,7 +30,7 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
         {
             Console.WriteLine("Put pizza in official franchise pizza box");
         }
-        public void SetPizzaName(string name)
+        internal void SetPizzaName(string name)
         {
             _name = name;
         }

@@ -10,9 +10,9 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
 {
     public abstract class PizzaStore
     {
-        public void OrderPizza(PizzaFlavors pizzaName)
+        public Pizza OrderPizza(PizzaFlavors pizzaName)
         {
-            CreatePizza(pizzaName);
+            return CreatePizza(pizzaName);
         }
         protected abstract Pizza CreatePizza(PizzaFlavors pizzaName);
 

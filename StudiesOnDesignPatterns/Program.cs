@@ -1,4 +1,5 @@
-﻿using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.PizzaStores;
+﻿using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Pizzas;
+using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.PizzaStores;
 using StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Entities;
 using StudiesOnDesignPatterns.Patterns.Decorator_Pattern.Interfaces;
 using StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Infrastructure;
@@ -19,7 +20,12 @@ namespace StudiesOnDesignPatterns
             //The different patterns are stored in the 'Patterns' folder
 
             PizzaStore nycPizzaStore = new NYCPizzaStyleStore();
-            nycPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavors.Cheese);
+            Pizza clamPizza = nycPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavors.Clam);
+            clamPizza.PreparePizza();
+            clamPizza.BakePizza();
+            clamPizza.BoxPizza();
+            clamPizza.CutPizza();
+
             Console.ReadKey();
 
         }
