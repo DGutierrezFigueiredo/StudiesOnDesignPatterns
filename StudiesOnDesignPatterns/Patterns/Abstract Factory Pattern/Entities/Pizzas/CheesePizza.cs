@@ -23,8 +23,9 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
             cheese = _pizzaIngredientFactory.CreateCheese();
             dough = _pizzaIngredientFactory.CreateDough();
             sauce = _pizzaIngredientFactory.CreateSauce();
-            Console.WriteLine($"Preparing {CamelCaseSplitter.SplitCamelCase(dough.GetType().Name)}, spreading {sauce.GetType().Name}, " +
-                              $"and topping it with {cheese.GetType().Name}.");
+            Console.WriteLine($"Preparing {CamelCaseSplitter.SplitCamelCase(dough.GetType().Name)}, " +
+                              $"spreading {CamelCaseSplitter.SplitCamelCase(sauce.GetType().Name)}, " +
+                              $"and topping it with {CamelCaseSplitter.SplitCamelCase(cheese.GetType().Name)}.");
         }
                 
     }

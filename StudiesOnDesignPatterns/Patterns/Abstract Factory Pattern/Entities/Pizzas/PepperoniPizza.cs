@@ -1,4 +1,5 @@
 ﻿using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Factories;
+using StudiesOnDesignPatterns.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,9 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
             dough = _pizzaIngredientFactory.CreateDough();
             sauce = _pizzaIngredientFactory.CreateSauce();
             pepperoni = _pizzaIngredientFactory.CreatePepperoni();
+            Console.WriteLine($"Preparing {CamelCaseSplitter.SplitCamelCase(dough.GetType().Name)}, " +
+                              $"spreading {CamelCaseSplitter.SplitCamelCase(sauce.GetType().Name)}, " +
+                              $"and topping it with {CamelCaseSplitter.SplitCamelCase(pepperoni.GetType().Name)}"); 
 
         }
     }

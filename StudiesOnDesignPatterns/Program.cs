@@ -33,6 +33,12 @@ namespace StudiesOnDesignPatterns
             clamPizza2.BoxPizza();
             clamPizza2.CutPizza();
 
+            Pizza veggiePizza = nycPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavor.Vegetarian);
+            veggiePizza.PreparePizza();
+            veggiePizza.BakePizza();
+            veggiePizza.BoxPizza();
+            veggiePizza.CutPizza();
+
             Console.ReadKey();
 
         }
