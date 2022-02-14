@@ -8,5 +8,6 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
 {
     public class ReggianoCheese : ICheese
     {
+        
     }
 }

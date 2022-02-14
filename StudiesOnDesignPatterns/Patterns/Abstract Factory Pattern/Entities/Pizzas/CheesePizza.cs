@@ -1,4 +1,5 @@
 ﻿using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Factories;
+using StudiesOnDesignPatterns.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,14 +17,14 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
             _pizzaIngredientFactory = pizzaIngredientFactory;
         }
 
-
         public override void PreparePizza()
         {
             Console.WriteLine("Preparing a " + GetPizzaName());
             cheese = _pizzaIngredientFactory.CreateCheese();
             dough = _pizzaIngredientFactory.CreateDough();
             sauce = _pizzaIngredientFactory.CreateSauce();
-
+            Console.WriteLine($"Preparing {CamelCaseSplitter.SplitCamelCase(dough.GetType().Name)}, spreading {sauce.GetType().Name}, " +
+                              $"and topping it with {cheese.GetType().Name}.");
         }
                 
     }

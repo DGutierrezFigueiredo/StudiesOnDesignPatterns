@@ -11,26 +11,26 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
 {
     public class ChicagoPizzaStyleStore : PizzaStore
     {
-        protected override Pizza CreatePizza(PizzaFlavors pizzaName)
+        protected override Pizza CreatePizza(PizzaFlavor pizzaName)
         {
             Pizza pizza = null;
             IPizzaIngredientFactory _chicagoPizzaIngredientFactory = new ChicagoPizzaIngredientFactory();
 
             switch (pizzaName)
             {
-                case PizzaFlavors.Cheese:
+                case PizzaFlavor.Cheese:
                     pizza = new CheesePizza(_chicagoPizzaIngredientFactory);
                     pizza.SetPizzaName("Cheese Pizza Chicago Style");
                     break;
-                case PizzaFlavors.Clam:
+                case PizzaFlavor.Clam:
                     pizza = new ClamPizza(_chicagoPizzaIngredientFactory);
                     pizza.SetPizzaName("Clam Pizza Chicago Style");
                     break;
-                case PizzaFlavors.Pepperoni:
+                case PizzaFlavor.Pepperoni:
                     pizza = new PepperoniPizza(_chicagoPizzaIngredientFactory);
                     pizza.SetPizzaName("Pepperoni Pizza Chicago Style");
                     break;
-                case PizzaFlavors.Vegetarian:
+                case PizzaFlavor.Vegetarian:
                     pizza = new VegetarianPizza(_chicagoPizzaIngredientFactory);
                     pizza.SetPizzaName("Vegetarian Pizza Chicago Style");
                     break;

@@ -20,11 +20,18 @@ namespace StudiesOnDesignPatterns
             //The different patterns are stored in the 'Patterns' folder
 
             PizzaStore nycPizzaStore = new NYCPizzaStyleStore();
-            Pizza clamPizza = nycPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavors.Clam);
+            Pizza clamPizza = nycPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavor.Clam);
             clamPizza.PreparePizza();
             clamPizza.BakePizza();
             clamPizza.BoxPizza();
             clamPizza.CutPizza();
+
+            PizzaStore chicagoPizzaStore = new ChicagoPizzaStyleStore();
+            Pizza clamPizza2 = chicagoPizzaStore.OrderPizza(Patterns.Abstract_Factory_Pattern.Enums.PizzaFlavor.Clam);
+            clamPizza2.PreparePizza();
+            clamPizza2.BakePizza();
+            clamPizza2.BoxPizza();
+            clamPizza2.CutPizza();
 
             Console.ReadKey();
 

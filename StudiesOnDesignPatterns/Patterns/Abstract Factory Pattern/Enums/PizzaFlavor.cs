@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Enums
 {
-    public enum PizzaFlavors
+    public enum PizzaFlavor
     {
         Cheese = 1,
         Clam = 2,

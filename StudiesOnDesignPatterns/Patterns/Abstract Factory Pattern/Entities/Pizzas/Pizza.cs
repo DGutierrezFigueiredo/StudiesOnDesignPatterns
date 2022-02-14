@@ -1,4 +1,5 @@
 ﻿using StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.PizzaIngredients;
+using StudiesOnDesignPatterns.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
         public ICheese cheese;
         public IPepperoni pepperoni;
         public IClam clam;
-
+                
         public abstract void PreparePizza();
         public virtual void BakePizza()
         {
@@ -24,7 +25,7 @@ namespace StudiesOnDesignPatterns.Patterns.Abstract_Factory_Pattern.Entities.Piz
         }
         public virtual void CutPizza()
         {
-            Console.WriteLine("Cut pizza in 8 diagonal slices");
+            Console.WriteLine("Cut pizza in 8 diagonal slices\n");
         }
         public void BoxPizza()
         {
