@@ -3,6 +3,8 @@
 
 <b>Table:</b>
 
+-Abstract Factory Pattern
+
 -Decorator Pattern
 
 -NullObject Pattern
