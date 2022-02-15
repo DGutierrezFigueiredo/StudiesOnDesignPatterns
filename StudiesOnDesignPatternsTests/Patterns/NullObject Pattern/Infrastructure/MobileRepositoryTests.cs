@@ -13,7 +13,7 @@ namespace StudiesOnDesignPatterns.Patterns.NullObject_Pattern.Infrastructure.Tes
     public class MobileRepositoryTests
     {
         [TestMethod()]
-        public void GetMobileByNameTest()
+        public void GetMobileByName_NonExistantCelModelGet_ShouldNotBeNull()
         {
             MobileRepository mobileRepository = new MobileRepository();
             IMobile mobile = mobileRepository.GetMobileByName("sony");
